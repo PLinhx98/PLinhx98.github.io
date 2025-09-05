@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>yourusername.github.io</title>
+  <meta name="description" content="Welcome to my simple, fast, and free website hosted on GitHub Pages." />
+  <meta property="og:title" content="yourusername.github.io" />
+  <meta property="og:description" content="Welcome to my simple, fast, and free website hosted on GitHub Pages." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827ee;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --accent:#22d3ee;
+      --accent-2:#a78bfa;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(120deg,var(--bg),#020617);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{opacity:.9}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(2,6,23,.6);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #1f2937}
+    nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    nav .brand{font-weight:700;letter-spacing:.2px}
+    nav .links a{padding:10px 12px;border-radius:12px}
+    nav .links a:hover{background:#0b1220}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:64px 0}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .badge{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001018;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.5px}
+    h1{font-size:40px;line-height:1.1;margin:.4em 0}
+    .cta{display:inline-block;margin-top:14px;padding:12px 16px;border-radius:14px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001018;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .footer{padding:48px 0;color:var(--muted);border-top:1px solid #1f2937;margin-top:48px}
+    @media (max-width:860px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">yourusername.github.io</div>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="badge">Hello 👋</span>
+        <h1>Simple, fast & free site on <span style="color:var(--accent)">GitHub Pages</span></h1>
+        <p>Swap this text with who you are and what you do. This site is a single <code>index.html</code> file—no frameworks, no build step, loads instantly.</p>
+        <a class="cta" href="#projects">See my work</a>
+      </div>
+      <div class="card">
+        <h3>What you get</h3>
+        <ul>
+          <li>Free hosting on <code>yourusername.github.io</code></li>
+          <li>Clean, responsive layout</li>
+          <li>Easy to edit—just text & HTML</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>Write a short bio here. Keep it clear: what do you do, what problems do you solve, and how can people reach you?</p>
+    </section>
+
+    <section id="projects" style="margin-top:18px" class="card">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>One-liner about what it is and the outcome.</p>
+          <a href="#">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Another one-liner. Keep it scannable.</p>
+          <a href="#">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Another highlight with a link.</p>
+          <a href="#">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>Social: <a href="#">@yourhandle</a></p>
+    </section>
+
+    <section class="footer">
+      <p>© <span id="y"></span> yourusername.github.io. Built with ♥ on GitHub Pages.</p>
+    </section>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
